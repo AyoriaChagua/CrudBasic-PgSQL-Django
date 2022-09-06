@@ -33,4 +33,5 @@ def update_task(request):
     task = Task.objects.get(id = id)
     task.title = title
     task.description = description
+    task.save()
     return redirect('/tasks/')
